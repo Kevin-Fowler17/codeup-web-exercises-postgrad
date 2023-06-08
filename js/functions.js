@@ -28,6 +28,9 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+let myName = "Kevin";
+let helloMessage2 = sayHello(myName);
+console.log( helloMessage2)
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
