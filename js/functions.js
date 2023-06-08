@@ -70,6 +70,9 @@ console.log(isTwo(random), random);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+function calculateTip(tipPercentage, totalBill){
+    return totalBill * tipPercentage
+}
 
 /**
  * TODO:
@@ -77,6 +80,12 @@ console.log(isTwo(random), random);
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+let totalBillMsg = prompt("What is the bill total?");
+let tipPercentageMsg = prompt("What percentage would you like to tip?");
+let tipAmount = calculateTip(tipPercentageMsg, totalBillMsg);
+let totalBillWithTip = parseInt(totalBillMsg) + parseInt(tipAmount)
+
+alert("Your total bill was " + totalBillMsg + ", and you wanted to tip " + tipPercentageMsg + ". That tip amount is $" + tipAmount + ", for a grand total of $" + totalBillWithTip + ".")
 
 /**
  * TODO:
@@ -92,3 +101,13 @@ console.log(isTwo(random), random);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+function applyDiscount(price, discountPercent){
+    return price - (price * discountPercent);
+}
+
+let originalPrice = prompt("What is the price?");
+let discountPercent = prompt("What is the discount percent?");
+let finalPrice = applyDiscount(originalPrice, discountPercent)
+
+
+alert ("The original price was $" + originalPrice + ". The percent discount is " + discountPercent + ". Your price after discount is $" + finalPrice +".")
