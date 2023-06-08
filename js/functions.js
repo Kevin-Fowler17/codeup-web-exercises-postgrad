@@ -53,6 +53,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo(num){
+    return num === 2;
+}
+
+console.log(isTwo(random), random);
 
 /**
  * TODO:
