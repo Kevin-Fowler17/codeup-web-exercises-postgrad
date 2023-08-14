@@ -21,6 +21,26 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+function analyzeColor(color) {
+    if (color.toLowerCase() === "red") {
+        console.log("Red means stop.")
+    } else if (color.toLowerCase() === "blue") {
+        console.log("Blue is color of cold.")
+    } else if (color.toLowerCase() === "green") {
+        console.log("Green is the color money, money, money!")
+    } else if (color.toLowerCase() === "yellow") {
+        console.log("You coward!")
+    } else {
+        console.log("It that even a color?")
+    }
+}
+
+analyzeColor("Red")
+analyzeColor("bLUe")
+analyzeColor("GREEN")
+analyzeColor("yellow")
+analyzeColor("orange")
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
