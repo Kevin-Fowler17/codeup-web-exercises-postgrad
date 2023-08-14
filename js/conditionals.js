@@ -21,25 +21,25 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor(color) {
-    if (color.toLowerCase() === "red") {
-        console.log("Red means stop.")
-    } else if (color.toLowerCase() === "blue") {
-        console.log("Blue is color of cold.")
-    } else if (color.toLowerCase() === "green") {
-        console.log("Green is the color money, money, money!")
-    } else if (color.toLowerCase() === "yellow") {
-        console.log("You coward!")
-    } else {
-        console.log("It that even a color?")
-    }
-}
+// function analyzeColor(color) {
+//     if (color.toLowerCase() === "red") {
+//         console.log("Red means stop.")
+//     } else if (color.toLowerCase() === "blue") {
+//         console.log("Blue is color of cold.")
+//     } else if (color.toLowerCase() === "green") {
+//         console.log("Green is the color money, money, money!")
+//     } else if (color.toLowerCase() === "yellow") {
+//         console.log("You coward!")
+//     } else {
+//         console.log("Is that even a color?")
+//     }
+// }
 
-analyzeColor("Red")
-analyzeColor("bLUe")
-analyzeColor("GREEN")
-analyzeColor("yellow")
-analyzeColor("orange")
+// analyzeColor("Red")
+// analyzeColor("bLUe")
+// analyzeColor("GREEN")
+// analyzeColor("yellow")
+// analyzeColor("orange")
 
 
 // Don't change the next two lines!
@@ -55,10 +55,33 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+// console.log("Color chosen: " + randomColor)
+// analyzeColor(randomColor)
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+function analyzeColor(color) {
+    switch (color.toLowerCase()) {
+        case "red":
+            alert("Red means stop.");
+            break;
+        case "blue":
+            alert("Blue is color of cold.");
+            break;
+        case "green":
+            alert("Green is the color money, money, money!");
+            break;
+        case "yellow":
+            alert("You coward!");
+            break;
+        default:
+            alert(color + ", is that even a color?");
+            break;
+    }
+}
+
 
 /**
  * TODO:
@@ -66,6 +89,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+let colorInput = prompt("Enter a color, any color.");
+analyzeColor(colorInput);
 
 /* ########################################################################## */
 
