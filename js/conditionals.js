@@ -131,7 +131,7 @@ function calculateTotal(discount, total) {
         discountedPrice = total;
     }
 
-    alert("Your final price is $" + discountedPrice + ".");
+    alert("Your lucky number was " + discount + ". Your total bill before discount is $" + total + ". Your final price after discount is $" + discountedPrice + ".");
 }
 
 // calculateTotal(0, 100)
@@ -151,6 +151,10 @@ function calculateTotal(discount, total) {
  */
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
+
+let totalBillBeforeDiscount = prompt("What was your total bill?");
+calculateTotal(luckyNumber, totalBillBeforeDiscount);
+
 
 /**
  * TODO:
