@@ -113,6 +113,33 @@ analyzeColor(colorInput);
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(discount, total) {
+
+    let discountedPrice = 0;
+
+    if (discount === 0) {
+        discountedPrice = total;
+    } else if (discount === 1) {
+        discountedPrice = total * .9;
+    } else if (discount === 2) {
+        discountedPrice = total * .75;
+    } else if (discount === 3) {
+        discountedPrice = total * .65;
+    } else if (discount === 4) {
+        discountedPrice = total * .5;
+    } else {
+        discountedPrice = total;
+    }
+
+    alert("Your final price is $" + discountedPrice + ".");
+}
+
+// calculateTotal(0, 100)
+// calculateTotal(1, 100)
+// calculateTotal(2, 100)
+// calculateTotal(3, 100)
+// calculateTotal(4, 100)
+// calculateTotal(5, 100)
 
 /**
  * TODO:
@@ -123,7 +150,7 @@ analyzeColor(colorInput);
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
 
 /**
  * TODO:
