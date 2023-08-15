@@ -128,7 +128,7 @@ function calculateTotal(discount, total) {
     } else if (discount === 4) {
         discountedPrice = total * .5;
     } else {
-        discountedPrice = total;
+        discountedPrice = 0;
     }
 
     alert("Your lucky number was " + discount + ". Your total bill before discount is $" + total + ". Your final price after discount is $" + discountedPrice + ".");
@@ -174,3 +174,37 @@ calculateTotal(luckyNumber, totalBillBeforeDiscount);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+let confirmed = confirm("Would you like to enter a number?");
+
+if (confirmed) {
+    let valueEntered = prompt("Enter a number ...");
+    if (isNaN(valueEntered)) {
+        alert("That is not a number!");
+    } else {
+        oddEven(valueEntered);
+        plus100(valueEntered);
+        negativePositive(valueEntered);
+    }
+}
+
+function oddEven(valueEntered) {
+    if(valueEntered % 2 == 0) {
+        alert("The number is even.");
+    } else {
+        alert("The number is odd.");
+    }
+}
+
+function plus100(valueEntered) {
+    alert("The number you entered " + valueEntered + ", added to 100 is " + (parseInt(valueEntered) + 100) + ".");
+}
+
+function negativePositive(valueEntered) {
+    if(valueEntered > 0){
+        alert("The number you entered is positive.");
+    } else if (valueEntered < 0) {
+        alert("The number you entered is negative.");
+    } else {
+        alert("The number you entered is neutral.");
+    }
+}
