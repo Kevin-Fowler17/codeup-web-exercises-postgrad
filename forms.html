@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/forms.css">
     <title>Register With Us</title>
 </head>
 <body>
@@ -11,6 +12,29 @@
 </h1>
 
 <form method="POST" action="https://request-inspector.glitch.me/">
+
+    <p>
+        <label for="email">Email address</label><br>
+        <input type="text" class="custom-input" id="email" name="email" placeholder="Enter your email address">
+    </p>
+
+    <p>
+        <label for="password">Password</label><br>
+        <input type="password" class="custom-input" id="password" name="password">
+    </p>
+
+    <p>
+        <label for="bio">Enter bio here ... </label><br>
+        <textarea id="bio" name="bio"></textarea>
+    </p>
+
+    <p>
+        How did you hear about us?<br>
+        <input type="radio" name="hear_about_us" value="a">Billboard<br>
+        <input type="radio" name="hear_about_us" value="b">Radio advertisement<br>
+        <input type="radio" name="hear_about_us" value="c">Internet advertisement<br>
+        <input type="radio" name="hear_about_us" value="d">Other<br>
+    </p>
 
 
 </form>
